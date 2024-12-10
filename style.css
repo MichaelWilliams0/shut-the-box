@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+body {
+    background-color: #000;
+    color: #053B06;
+    font-family: 'Protest Strike', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top of the screen */
+    height: 100vh;
+    margin: 0;
+    padding-top: 50px; /* Add padding to the top to avoid cut-off */
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    max-width: 800px; /* Prevent the content from being too wide */
+    width: 100%;
+}
+
+h1, h3, h4 {
+    color: #053B06;
+    font-size: 3rem;
+    margin-bottom: 20px; /* Space between heading and next element */
+}
+
+input[type="text"] {
+    margin: 20px;
+    padding: 12px;
+    font-size: 1.5rem;
+    width: 250px;
+    background-color: #fff;
+    border: 2px solid #053B06;
+    color: #053B06;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+button {
+    margin: 20px;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 250px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #053B06;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.box[data-lid="open"] {
+    background-color: #fff;
+}
+
+.box[data-lid="closed"] {
+    background-color: #808080;
+}
+
+#dice {
+    margin-top: 40px;
+}
+
+#dice i {
+    font-size: 5rem;
+    margin: 10px;
+}
+
+#diceSum {
+    font-size: 2.5rem;
+    margin: 15px;
+}
+
+#scorecard {
+    margin-top: 40px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns for 5 rounds */
+    grid-template-rows: 2fr 2fr; /* 2 rows for Player 1 and Player 2 */
+    gap: 10px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.grid-item {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border: 5px solid #053B06;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #053B06;
+}
+
+#winnerText {
+    font-size: 3rem;
+    color: #fff;
+    margin-top: 30px;
+}
+
+.shut {
+    background-color: #d9534f;
+    color: #ad0309;
+    border-color: #ad0309;
+}
+
+
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border: 2px solid #ccc;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+

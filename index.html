@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shut the Box</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Player Names Section -->
+        <section id="players">
+            <h1>Shut the Box</h1>
+            <div>
+                <!-- Input fields for player names -->
+                <input type="text" id="player1" placeholder="Player 1 Name" required>
+                <input type="text" id="player2" placeholder="Player 2 Name" required>
+            </div>
+            <button id="startBtn">Start Game</button> <!-- Start Game button -->
+        </section>
+
+        <!-- Game Board Section -->
+        <section id="board">
+            <h3 id="roundText">Round: 1</h3>
+            <h4 id="turnText">It's Player 1's turn</h4>
+            <div class="boxes">
+                <div class="box" id="box1" data-lid="open">1</div>
+                <div class="box" id="box2" data-lid="open">2</div>
+                <div class="box" id="box3" data-lid="open">3</div>
+                <div class="box" id="box4" data-lid="open">4</div>
+                <div class="box" id="box5" data-lid="open">5</div>
+                <div class="box" id="box6" data-lid="open">6</div>
+                <div class="box" id="box7" data-lid="open">7</div>
+                <div class="box" id="box8" data-lid="open">8</div>
+                <div class="box" id="box9" data-lid="open">9</div>
+            </div>
+        </section>
+
+        <!-- Dice Section -->
+        <section id="dice">
+            <div>
+                <i class="bi bi-dice-1" id="die1"></i>
+                <i class="bi bi-dice-1" id="die2"></i>
+            </div>
+            <p id="diceSum">Sum: 0</p>
+            <div>
+                <button id="rollBtn" disabled>Roll</button>
+                <button id="individualDiceBtn" disabled>Individual Dice</button>
+                <button id="sumOfDiceBtn" disabled>Sum of Dice</button>
+                <button id="endTurnBtn" disabled>End Turn</button>
+            </div>
+        </section>
+
+        <!-- Basic Grid for Scorecard -->
+        <section id="scorecard">
+            <h3>Scorecard</h3>
+            <div">
+               <section  class="Scorecard">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th id="tp1name">Player 1</th>
+                            <th id="tp2name">Player 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- will be scorecard -->
+                    </tbody>
+                </table>
+               </section>
+            </div>
+        </section>
+
+        <!-- Winner Section -->
+        <div id="winner" style="display: none;">
+            <h2 id="winnerText"></h2>
+            <button id="playAgainBtn">Play Again</button>
+        </div>
+
+
+
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
